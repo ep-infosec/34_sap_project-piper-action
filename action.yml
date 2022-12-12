@@ -1,0 +1,21 @@
+name: 'Project "Piper" Action'
+description: 'CI/CD tooling for the SAP Ecosystem'
+inputs:
+  command:
+    description: 'command to run'
+    required: true
+    default: 'help'
+  flags:
+    description: 'flags/arguments for command'
+    required: false
+    default: ''
+  piper-version:
+    description: 'specify a version of the piper binary to use, may be "master", "latest" or a released tag'
+    required: false
+    default: 'latest'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'play'  
+  color: 'green'
